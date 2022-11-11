@@ -9,7 +9,7 @@
 
 // Funktionsrumpf (body) | callee
 // Funktionsdeklaration
-// function test()
+// // function test()
 // {
 //     console.log("Hallo Sabine!");
 // }
@@ -28,10 +28,21 @@
 /***** Funktionen 02b *****/
 // 2b. Parametrisierung + Datenübergabe von AUSSEN
 
-ausgabeNamenParam(prompt("Please enter a name:","Name")); // Argument
+// ausgabeNamenParam(prompt("Please enter a name:","Name")); // Argument
 // Argumente sind Daten für Parameter
 
-function ausgabeNamenParam(firstName) //Parameter
+// function ausgabeNamenParam(firstName) //Parameter
+// {
+//     console.log("Welcome, " + firstName + "!");
+// }
+
+/***** Funktionen 02c *****/
+// 2c. Mehrere Parameter
+
+// ausgabeNamenParams("Michael","Müller"); //Argument
+ausgabeNamenParams((prompt("Please enter a first name:","First Name")),(prompt("Please enter a last name:","Last Name")))
+
+function ausgabeNamenParams(firstName,familyName) //Parameter
 {
-    console.log("Welcome, " + firstName + "!");
+    console.log("Welcome, " + firstName + " " + familyName + "!");
 }
