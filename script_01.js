@@ -40,9 +40,27 @@
 // 2c. Mehrere Parameter
 
 // ausgabeNamenParams("Michael","Müller"); //Argument
-ausgabeNamenParams((prompt("Please enter a first name:","First Name")),(prompt("Please enter a last name:","Last Name")))
+// ausgabeNamenParams((prompt("Please enter a first name:","First Name")),(prompt("Please enter a last name:","Last Name")))
 
-function ausgabeNamenParams(firstName,familyName) //Parameter
+// function ausgabeNamenParams(firstName,familyName) //Parameter
+// {
+//     console.log("Welcome, " + firstName + " " + familyName + "!");
+// }
+
+/***** Funktionen 03a *****/
+// 3a. Vorbereitung
+//Postulat: one function = one job (Uncle Bob)
+//SRP single responsibility principle - "A module should be responsible to one, and only one, actor."
+
+ausgabeNamenParams2((prompt("Please enter a first name:","First Name")),(prompt("Please enter a last name:","Last Name")))
+
+function ausgabeNamenParams2(firstName,familyName) //Parameter
 {
-    console.log("Welcome, " + firstName + " " + familyName + "!");
+
+    // 1. Funktionalität: string composting
+    const gap = " ";
+    const outputStr = "Welcome, " + firstName + gap + familyName + "!";
+
+    // 2. Funktionalität: data output
+    console.log(outputStr);
 }
