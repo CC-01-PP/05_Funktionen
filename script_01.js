@@ -52,15 +52,33 @@
 //Postulat: one function = one job (Uncle Bob)
 //SRP single responsibility principle - "A module should be responsible to one, and only one, actor."
 
-ausgabeNamenParams2((prompt("Please enter a first name:","First Name")),(prompt("Please enter a last name:","Last Name")))
+// ausgabeNamenParams2((prompt("Please enter a first name:","First Name")),(prompt("Please enter a last name:","Last Name")))
 
-function ausgabeNamenParams2(firstName,familyName) //Parameter
-{
+// function ausgabeNamenParams2(firstName,familyName) //Parameter
+// {
 
-    // 1. Funktionalität: string composting
+//     // 1. Funktionalität: string composting
+//     const gap = " ";
+//     const outputStr = "Welcome, " + firstName + gap + familyName + "!";
+
+//     // 2. Funktionalität: data output
+//     console.log(outputStr);
+// }
+
+/***** Funktionen 03b *****/
+// 3b. Trennen der Funktionalitäten | return
+
+ // 1. Funktionalität: string composing
+ output(getString("Maxine","Mütze"));
+ function getString(firstName,familyName) {
     const gap = " ";
-    const outputStr = "Welcome, " + firstName + gap + familyName + "!";
+    const outputStr = "Hallo " + firstName + gap + familyName + "!";
+    return outputStr;
+ }
+    
+    // 2. Funktionalität: string output
+// output("hi"); // Call
 
-    // 2. Funktionalität: data output
-    console.log(outputStr);
+function output(outputData) { // Wrapper
+    console.log(outputData);
 }
